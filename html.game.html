@@ -12,7 +12,7 @@
     //2.
 
     function do_game() {
-        try {}
+        try {
 
             //calculation
             var target_index = Math.floor(Math.random() * (colors.length - 0)) + 0;
@@ -28,11 +28,16 @@
                 }
 
             }
+        }
+        catch (e) {
+            
+        }
         var guess_input;
         var finished = false;
         var gameCount = 0;
         alert(target);
 
+        //While loop
         while (!finished){
             guess_input = prompt(message).toLowerCase();
             gameCount++;
@@ -47,7 +52,7 @@
 
         }
         var myBody = document.getElementsByTagName("body")[0];
-            myBody.style.background = target; 
+            myBody.style.background = target;
     }
 
     function check_guess(guess, target) {
